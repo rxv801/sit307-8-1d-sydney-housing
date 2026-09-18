@@ -1,0 +1,4 @@
+Model,Best parameters,CV MAE,CV MAPE %,CV MAPE sd,CV R2 (log)
+Ridge,{'model__alpha': 1.0},330106.7545784453,16.968910839894885,0.5197685159180035,0.8949663005264392
+Random Forest,"{'model__max_depth': 10, 'model__min_samples_leaf': 1, 'model__n_estimators': 300}",311204.9637460798,16.090736121192318,0.852799936325099,0.9018843307984212
+Gradient Boosting,"{'model__learning_rate': 0.1, 'model__max_depth': 2, 'model__n_estimators': 400}",321034.8493261244,15.992338549827878,0.5370938812639001,0.9093957987307324

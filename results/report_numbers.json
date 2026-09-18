@@ -1,0 +1,133 @@
+{
+  "raw_rows": 164,
+  "source_pages": 11,
+  "withheld": 10,
+  "duplicates_removed": 0,
+  "modelled_rows": 154,
+  "skew_raw": 3.3532841274280316,
+  "skew_log": 1.1558857537341303,
+  "suburb_summary": {
+    "Parramatta": {
+      "properties": 46.0,
+      "median": 595000.0,
+      "minimum": 250000.0,
+      "maximum": 2080000.0
+    },
+    "Blacktown": {
+      "properties": 56.0,
+      "median": 905000.0,
+      "minimum": 375000.0,
+      "maximum": 1900000.0
+    },
+    "Mosman": {
+      "properties": 52.0,
+      "median": 1565000.0,
+      "minimum": 610000.0,
+      "maximum": 11650000.0
+    }
+  },
+  "n_flagged": 8,
+  "flagged_by_suburb": {
+    "Mosman": 5,
+    "Parramatta": 3
+  },
+  "corr_months_mosman": -0.8310752212982557,
+  "pct_auction_mosman": 48.07692307692308,
+  "pct_auction_parramatta": 4.3478260869565215,
+  "ablation": {
+    "both time and auction": 16.310652845086118,
+    "months_since_start only": 16.670667800662063,
+    "is_auction only": 15.611708424687066,
+    "neither (final set)": 15.561643108800357
+  },
+  "imp_months_when_included": 0.46575673110007093,
+  "imp_months_rank": 1,
+  "model_comparison": {
+    "Ridge": {
+      "CV MAE": 330106.7545784453,
+      "CV RMSE": 880313.0965301186,
+      "CV MAPE %": 16.968910839894885,
+      "CV MAPE sd": 0.5197685159180035,
+      "CV R2 (log)": 0.8949663005264392,
+      "Train MAE": 283604.51591883943
+    },
+    "Random Forest": {
+      "CV MAE": 312888.67447407614,
+      "CV RMSE": 821195.7935711907,
+      "CV MAPE %": 16.24951245860033,
+      "CV MAPE sd": 0.6944609617555553,
+      "CV R2 (log)": 0.902157018427396,
+      "Train MAE": 214877.29594782117
+    },
+    "Gradient Boosting": {
+      "CV MAE": 312207.45380410505,
+      "CV RMSE": 797973.726789313,
+      "CV MAPE %": 15.932103318241047,
+      "CV MAPE sd": 0.48296822774426323,
+      "CV R2 (log)": 0.9102224861174066,
+      "Train MAE": 138849.36322696303
+    }
+  },
+  "rf_wins_seeds": 0,
+  "n_seeds": 5,
+  "rf_gb_gap": -0.31740914035928114,
+  "rf_mape_spread": [
+    15.5616431088004,
+    17.293580846043238
+  ],
+  "tuned": {
+    "Ridge": {
+      "CV MAE": 330106.7545784453,
+      "CV MAPE %": 16.968910839894885,
+      "CV MAPE sd": 0.5197685159180035,
+      "CV R2 (log)": 0.8949663005264392,
+      "Best parameters": "{'model__alpha': 1.0}"
+    },
+    "Random Forest": {
+      "CV MAE": 311204.9637460798,
+      "CV MAPE %": 16.090736121192318,
+      "CV MAPE sd": 0.852799936325099,
+      "CV R2 (log)": 0.9018843307984212,
+      "Best parameters": "{'model__max_depth': 10, 'model__min_samples_leaf': 1, 'model__n_estimators': 300}"
+    },
+    "Gradient Boosting": {
+      "CV MAE": 321034.8493261244,
+      "CV MAPE %": 15.992338549827878,
+      "CV MAPE sd": 0.5370938812639001,
+      "CV R2 (log)": 0.9093957987307324,
+      "Best parameters": "{'model__learning_rate': 0.1, 'model__max_depth': 2, 'model__n_estimators': 400}"
+    }
+  },
+  "nested": {
+    "MAE": 326381.12826785416,
+    "RMSE": 911885.3321107676,
+    "MAPE_%": 15.91423479037784,
+    "R2_log": 0.9001315166605349
+  },
+  "best_model": "Gradient Boosting",
+  "top_features": {
+    "suburb_Mosman": 0.4109592063499488,
+    "beds": 0.2564300389476862,
+    "total_rooms": 0.17754355811146627,
+    "property_type_House": 0.05615126803318909,
+    "baths": 0.046461445907965714
+  },
+  "within_10": 45.45454545454545,
+  "within_20": 77.27272727272727,
+  "median_ape": 10.919952125013722,
+  "worst5_share": 43.20831976551736,
+  "worst5_types": {
+    "House": 5
+  },
+  "worst5_under": 3,
+  "mape_by_suburb": {
+    "Parramatta": 14.571862291761908,
+    "Blacktown": 9.138811688185774,
+    "Mosman": 22.531988997867884
+  },
+  "top_n": 16,
+  "top_pct_under": 56.25,
+  "top_median_signed": -3.4571947116884605,
+  "band_pct": 15.992338549827878,
+  "band_coverage": 66.23376623376623
+}
